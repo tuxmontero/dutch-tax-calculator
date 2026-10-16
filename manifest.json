@@ -4,6 +4,7 @@
   "name": "Dutch Tax Calculator",
   "version": "1.0.0",
   "author": "Jonathan",
+  "license": "MIT",
   "description": "Estimate Dutch salary tax and take-home pay for 2025 and 2026",
   "kinds": [
     "panel",

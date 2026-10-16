@@ -16,25 +16,33 @@ Rates and credits are based on published Belastingdienst tables for Box 1, the g
 
 This calculator is for estimation only, not tax advice. Confirm important amounts with the Belastingdienst or a qualified Dutch tax adviser.
 
-## Usage on Omarchy
+## Install
 
-The installed plugin lives at `~/.config/omarchy/plugins/jonathan.dutch-tax-calculator/`. The source files in this folder are a copy for review and development.
+On Omarchy Quattro, install and enable the plugin with:
 
 ```bash
-omarchy plugin enable jonathan.dutch-tax-calculator
-omarchy plugin disable jonathan.dutch-tax-calculator
-omarchy plugin validate ~/.config/omarchy/plugins/jonathan.dutch-tax-calculator
+omarchy plugin add https://github.com/tuxmontero/dutch-tax-calculator.git --enable
 ```
 
-To validate the source copy from this directory:
+Click the **€** icon in the bar to open the calculator.
+
+## Update and remove
+
+```bash
+omarchy plugin update jonathan.dutch-tax-calculator
+omarchy plugin remove jonathan.dutch-tax-calculator
+```
+
+## Validate and develop
 
 ```bash
 omarchy plugin validate .
+qmllint -I "$OMARCHY_PATH/shell" Calculator.qml BarWidget.qml
 ```
 
 ## Privacy
 
-Calculations run locally. Salary inputs remain in shell memory while the calculator is open; the plugin does not store or transmit them. The external TheTax.nl page is opened only when you click its link.
+Calculations run locally. The plugin has no external package dependencies, does not run subprocesses, and does not write files or change system settings. Salary inputs remain in shell memory while the calculator is open; it does not store or transmit them. The external TheTax.nl page opens only when you click its link.
 
 ## Source files
 
