@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "jonathan.dutch-tax-calculator",
+  "name": "Dutch Tax Calculator",
+  "version": "1.0.0",
+  "author": "Jonathan",
+  "description": "Estimate Dutch salary tax and take-home pay for 2025 and 2026",
+  "kinds": [
+    "panel",
+    "bar-widget"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "panel": "Calculator.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Tax calculator",
+    "description": "Estimate Dutch income tax and net salary",
+    "category": "Finance",
+    "defaultSection": "right",
+    "allowMultiple": false
+  }
+}
